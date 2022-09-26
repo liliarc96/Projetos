@@ -42,7 +42,7 @@ gcloud auth application-default print-access-token
 
 gsutil cp gs://[BUCKET]/[DOCUMENTO] .
 
-echo '{"inlineDocument": {"mimeType": ["image/jpg" ou "application/pdf" ou "image/png"],"content": "' > temp.json
+echo '{"inlineDocument": {"mimeType": ["image/jpg" ou "application/pdf" ou "image/png" ou "image/tiff"],"content": "' > temp.json
 base64 [DOCUMENTO] >> temp.json
 echo '"}}' >> temp.json
 cat temp.json | tr -d \\n > request.json
@@ -88,7 +88,7 @@ def process_document(project_id, location, processor_id, file_path ):
         image_content = image.read()
 		
     # Create the document object 
-    document = {"content": image_content, "mime_type": ["image/jpg" ou "image/png" ou "application/pdf"]}
+    document = {"content": image_content, "mime_type": ["image/jpg" ou "image/png" ou "application/pdf" ou "image/tiff"]}
 	
     # Configure the process request
     request = {"name": name, "document": document}
