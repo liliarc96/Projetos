@@ -28,5 +28,7 @@
 	`file_path = [NOME DO DOCUMENTO]` <br>
 	`processor_id = [ID DO PROCESSADOR]` <br>
 
-12. Execute todas as células do notebook;
+12. Mude "mime_type": [TIPO DE DOCUMENTO]; <br>
+
+12. Execute todas as células do notebook; <br>
 _____
